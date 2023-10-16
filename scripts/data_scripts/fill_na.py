@@ -36,7 +36,7 @@ def process_data(fd_in, fd_out):
             arr_age[i] = round(s / len(arr_age), 2)
 
     for transported, cryosleep, age, vip, spa in zip(arr_transp, arr_cryo, arr_age, arr_vip, arr_spa):
-        fd_out.write("{},{},{},{}\n".format(transported, cryosleep, age, vip, spa))
+        fd_out.write("{},{},{},{},{}\n".format(transported, cryosleep, age, vip, spa))
 
 with io.open(f_input, encoding="utf8") as fd_in:
     with io.open(f_output, "w", encoding="utf8") as fd_out:

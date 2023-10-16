@@ -20,7 +20,7 @@ def process_data(fd_in, fd_out):
         age = line[5]
         vip = line[6]
         spa = line[10]
-        fd_out.write("{},{},{},{}\n".format(transported, cryosleep, age, vip, spa))
+        fd_out.write("{},{},{},{},{}\n".format(transported, cryosleep, age, vip, spa))
 
 with io.open(f_input, encoding="utf8") as fd_in:
     with io.open(f_output, "w", encoding="utf8") as fd_out:
